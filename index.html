@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projeto de Semicondutores</title>
+    <link rel="stylesheet" type="text/css" href="semicondutores.css">
+    <script src="semicondutores.js"></script>
+</head>
+
+<!-- Programa feito por André Paiva Rodrigues e Pedro Augusto em 22/07/2018 para a disciplina ENGA47 -  Tecnologia dos Materiais 
+    para a Engenharia Elétrica da UFBA, ministrada pelo professor Tiago Trindade Ribeiro -->
+
+<body>
+    <div class="centro">
+        <h1>Projeto de Semicondutores Extrínsecos</h1>
+        <label>Informe o tipo do semicondutor:</label>
+        <br>
+        <br>
+        <input type="radio" onchange="selecionarTipoP()" checked="true" name="grupo" id="tipoP">
+        <label for="tipoP">Tipo P</label>
+        <input type="radio" onchange="selecionarTipoN()" name="grupo" id="tipoN">
+        <label for="tipoN">Tipo N</label>
+        <br>
+        <br>
+        <label>Informe o material do semicondutor:</label>
+        <br>
+        <br>
+        <select id="materialSemiCondutor">
+            <option value="silicio">Silício (Si)</option>
+            <option value="germanio">Germânio (Ge)</option>
+        </select>
+        <br>
+        <br>
+        <label>Informe a faixa de temperatura de operação do semicondutor (somente números, em Kelvin):</label>
+        <br>
+        <br>
+        <label for="temperaturaInicial">Temperatura Inicial </label>
+        <input type="number" id="temperaturaInicial"> ~
+        <input type="number" id="temperaturaFinal">
+        <label for="temperaturaFinal"> Temperatura Final</label>
+        <br>
+        <label style="color: red">Obs.: A temperatura inicial não pode ser maior que a temperatura final!</label>
+        <br>
+        <br>
+        <label>Informe a condutividade desejada (somente números, em Ωcm ^ −1)</label>:</label>
+        <br>
+        <br>
+        <input type="text" id="condutividade">
+        <br>
+        <br>
+        <button id="botao" class="botao" onclick="calcular()">Calcular</button>
+    </div>
+
+    <div class="centro" id="resultado">
+    </div>
+    <div class="centro" id="divtipoP">
+        Para o semicondutor do tipo P, possíveis materiais dopantes são: <br>
+        <img src="boro.png">
+        <img src="aluminio.png">
+        <img src="galio.png">
+        <img src="indio.png">
+        <img src="talio.png">
+    </div>
+    <div class="centro" id="divtipoN">
+        Para o semicondutor do tipo N, possíveis materiais dopantes são: <br>
+        <img src="arsenio.png">
+        <img src="fosforo.png">
+        <img src="antimonio.png">
+        <img src="bismuto.png">
+    </div>
+    <div class="centro" id="divForaDaFaixa">
+        AVISO: PARA A FAIXA DE TEMPERATURA INFORMADA, O SEU SEMICONDUTOR NÃO TERÁ UMA CONDUTÂNCIA CONSTANTE!
+    </div>
+    <div class="centro" id="divDerreteu">
+        AVISO: A TEMPERATURA DE OPERAÇÃO DESEJADA PODE FAZER COM QUE O SEU SEMICONDUTOR DERRETA!
+    </div>
+</body>
+
+</html>

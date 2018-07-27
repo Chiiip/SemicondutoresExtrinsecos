@@ -1,0 +1,31 @@
+.centro {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+div#divtipoP {
+    display: none;
+    margin-top: 20px;
+}
+
+div#divtipoN {
+    display: none;
+    margin-top: 20px;
+}
+
+div#divForaDaFaixa {
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+div#divDerreteu {
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+    color: red;
+}
